@@ -1454,7 +1454,7 @@ class OvercookedGridworld(object):
         if not state.has_object(pos):
             return False
         obj = state.get_object(pos)
-        return obj.name == 'soup' and not obj.is_cooking and not obj.is_ready and len(obj.ingredients) > 0
+        return obj.name == 'soup' and not obj.is_cooking and not obj.is_ready and len(obj.ingredients) == 3
 
     def _check_valid_state(self, state):
         """Checks that the state is valid.
